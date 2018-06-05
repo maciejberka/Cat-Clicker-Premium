@@ -34,20 +34,35 @@ const model = {
     } 
   ]
   
-}
+};
 
 //OCTOPUS object contain methods which are using to communicate MODEL object and VIEW objects
 
 const octopus = {
   
-}
+};
 
 //VIEW objects contain methods using to render view for a user
 
 const listView = {
-  
-}
+  render: function(){
+    //Create li element
+    //Take the f
+  }
+};
 
 const areaView = {
   
-}
+};
+
+
+
+
+
+
+
+
+
+
+
+
