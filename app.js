@@ -40,15 +40,36 @@ const model = {
 
 const octopus = {
   
+  getCats: function() {
+    return model.cats;
+  }
+  
 };
 
 //VIEW objects contain methods using to render view for a user
 
 const listView = {
+  
   render: function(){
-    //Create li element
-    //Take the f
+    //Our <ul>
+    const catsList = document.querySelector('.cats-list');
+    //Get the array of cats to this variable using octopus's method. We do this cause we don't want to let View objects talk directly with Model object
+    const cats = octopus.getCats();
+    
+    //Iterate trough array of cats...
+    for(cat of cats){
+      listElement = document.createElement('li');
+      listElement.textContent = cat.name;
+      
+      listElement.addEventListener('click', function(){
+        //render areaView for clicked list element
+      });
+      
+      //Add element to the <ul>
+      catsList.appendChild(listElement);
+    }
   }
+    
 };
 
 const areaView = {
